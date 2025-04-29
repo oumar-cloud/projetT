@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from .models import Produit
 
-def base(request):
-    return render(request, 'base.html')
+def acceuil(request):
+    return render(request, 'acceuil.html')
 
 def produits_view(request):
     produits = Produit.objects.all()
