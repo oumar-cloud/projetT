@@ -58,7 +58,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[BASE_DIR / 'pneapp/templates'],
+        'DIRS':[BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,7 +122,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'pneapp/static',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
